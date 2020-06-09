@@ -4,6 +4,7 @@
   "description": "Convert image to pixel art based on equidistant sampling method.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/zohoMatt/pixelit-equidistant/issues"
   },
-  "homepage": "https://github.com/zohoMatt/pixelit-equidistant#readme"
+  "homepage": "https://github.com/zohoMatt/pixelit-equidistant#readme",
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
 }
