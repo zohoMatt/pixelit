@@ -1,0 +1,25 @@
+{
+  "name": "pixelit-equidistant",
+  "version": "0.1.0",
+  "description": "Convert image to pixel art based on equidistant sampling method.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zohoMatt/pixelit-equidistant.git"
+  },
+  "keywords": [
+    "pixel",
+    "image",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Matt Zuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zohoMatt/pixelit-equidistant/issues"
+  },
+  "homepage": "https://github.com/zohoMatt/pixelit-equidistant#readme"
+}
