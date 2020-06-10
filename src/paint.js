@@ -20,3 +20,5 @@ const paint = (
         </svg>    
     `;
 };
+
+exports.paint = paint;
