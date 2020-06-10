@@ -30,6 +30,6 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
-    "canvas": "^2.6.1"
+    "get-pixels": "^3.3.2"
   }
 }
