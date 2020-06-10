@@ -1,24 +1,25 @@
 const paint = (
-    width,
-    height,
+    size,
     xPixels,
     yPixels,
     colorList
 ) => {
-    const pixelWidth = width / xPixels;
-    const pixelHeight = height / yPixels;
+    console.log(size, xPixels, yPixels);
     let rects = '';
-    for (let x = 0; x < pixelWidth * xPixels; x += pixelWidth) {
-        for (let y = 0; y < pixelHeight * yPixels; y += pixelHeight) {
+    for (let i = 0; i < xPixels; i += 1) {
+        for (let j = 0; j < yPixels; j += 1) {
+            const x = i * size;
+            const y = j * size;
             rects +=
-                `<rect width="${pixelWidth}" height="${pixelHeight}" x="${x}" y="${y}" fill="${colorList[x][y]}" />`;
+                `<rect width="${size}" height="${size}" x="${x}" y="${y}" fill="${colorList[i][j]}" />`;
         }
     }
+
     return `
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="${xPixels * pixelWidth}"
-            height="${yPixels * pixelHeight}">
+            width="${xPixels * size}"
+            height="${yPixels * size}">
             ${rects}
         </svg>    
     `;

@@ -22,15 +22,16 @@ const getData = (
     const yGap = height / yPixels;
     const yStartPt = mode === 'start' ? 0 :  yGap / 2;
 
-    const matrix = Array(xPixels).fill(0).map(_ => Array(yPixels).fill(''));    // xPixels * yPixels matrix
-    for (let i = 0; i < xPixels; i += 1) {
-        for (let j = 0; j < yPixels; j += 1) {
-            const x = xStartPt + i * xGap;
-            const y = yStartPt + j * yGap;
-            const bufferStartPt = ((y - 1) * width + x) * 4;    // RGBA mode contains 4 numbers
-            matrix[i][j] = `rgba(${rgbaBuffer.slice(bufferStartPt, bufferStartPt + 4).join(,)})`
+    const matrix = Array(xPixels).fill(0).map(() => Array(yPixels).fill(''));    // xPixels * yPixels matrix
+    for (let j = 0; j < yPixels; j += 1) {
+        const y = Math.floor(yStartPt + j * yGap);
+        for (let i = 0; i < xPixels; i += 1) {
+            const x = Math.floor(xStartPt + i * xGap);
+            const bufferStartPt = ((x - 1) * width + y) * 4;    // RGBA mode contains 4 numbers
+            matrix[j][i] = `rgba(${rgbaBuffer.slice(bufferStartPt, bufferStartPt + 4).join(',')})`
         }
     }
+    return matrix;
 };
 
 /**
@@ -52,7 +53,7 @@ const sampling = async (
     } catch (e) {
         console.error(e);
     }
-    const [width, height] = image;
+    const [width, height] = image.shape;
     return getData(width, height, xSamples, ySamples, image.data, options.mode);
 };
 
