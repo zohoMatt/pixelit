@@ -1,8 +1,8 @@
 {
-  "name": "pixelit-equidistant",
+  "name": "pixelit",
   "version": "0.1.0",
   "description": "Convert image to pixel art based on equidistant sampling method.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
