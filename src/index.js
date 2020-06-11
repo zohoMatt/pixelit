@@ -16,7 +16,7 @@ const pixelIt = async (
     const { x, y, pixel } = targetFileOptions;
 
     const samples = await sampling(sourceFilePath, x, y);
-    const svgElm = await paint(pixel, x, y, samples);
+    const svgElm = await paint(pixel, x, y, samples, { mode: 'around' });
     await exportSvg(path.resolve('.', originalFileName + '.svg'), svgElm);
 };
 
