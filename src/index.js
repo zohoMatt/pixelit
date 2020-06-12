@@ -6,7 +6,7 @@ const { paint } = require('./paint.js');
 
 /**
  * @param sourceFilePath
- * @param targetFileOptions {{ width: number, height: number, x: number, y: number }}
+ * @param targetFileOptions {{ pixel: number, x: number, y: number }}
  */
 const pixelIt = async (sourceFilePath, targetFileOptions) => {
     const originalFileName = path.basename(sourceFilePath);
@@ -16,5 +16,7 @@ const pixelIt = async (sourceFilePath, targetFileOptions) => {
     const svgElm = await paint(pixel, x, y, samples, { mode: 'around' });
     await exportSvg(path.resolve('.', originalFileName + '.svg'), svgElm);
 };
+
+pixelIt('/Users/MattZo/Downloads/avatar.jpeg', { pixel: 10, x: 44, y: 44 })
 
 module.exports = pixelIt;
