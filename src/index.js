@@ -17,6 +17,4 @@ const pixelIt = async (sourceFilePath, targetFileOptions) => {
     await exportSvg(path.resolve('.', originalFileName + '.svg'), svgElm);
 };
 
-pixelIt('/Users/MattZo/Downloads/avatar.jpeg', { pixel: 10, x: 44, y: 44 })
-
 module.exports = pixelIt;

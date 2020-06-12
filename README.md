@@ -9,4 +9,4 @@ Convert image to pixel art based on equidistant sampling method.
 
 > 🖨️ After processed
 
-![](https://i.ibb.co/hYHw9kw/avatar-pixel.jpg)
+![](https://i.ibb.co/xKk8h79/Screen-Shot-2020-06-12-at-4-06-06-PM.png)
