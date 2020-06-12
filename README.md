@@ -1,7 +1,7 @@
 # pixelit
 Convert image to pixel art based on equidistant sampling method.
 
-## Illustration
+## Example
 
 > 🖼️ Source image
 
