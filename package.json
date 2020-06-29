@@ -13,9 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/zohoMatt/pixelit-equidistant.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [
     "pixel",
     "image-processing",
