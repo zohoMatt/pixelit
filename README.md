@@ -5,7 +5,7 @@ Convert image to pixel art based on equidistant sampling method.
 
 > 🖼️ Source image
 
-<img src="https://ibb.co/VSk3Qdc" width="200" height="200"/>
+<img src="https://i.ibb.co/mqPSXmV/avatar.jpg" width="200" height="200"/>
 
 > 🖨️ After processed
 
